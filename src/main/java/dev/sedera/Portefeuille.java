@@ -29,12 +29,14 @@ public class Portefeuille {
     public boolean getMoney(double montant) {
         if (montant > 0 && montant <= argent) {
             argent -= montant;
+
             return true;
         }
         return false;
     }
 
     public double checkMoney() {
+
         return argent;
     }
 
