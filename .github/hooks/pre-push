@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Vérification Checkstyle avant push..."
+mvn checkstyle:check
+if [ $? -ne 0 ]; then
+  echo "❌ Checkstyle a échoué ,  il y a des erreur donc Push annulé."
+  exit 1
+fi
