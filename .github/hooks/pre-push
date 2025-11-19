@@ -1,6 +1,0 @@
-Write-Host "Vérification Checkstyle avant push..."
-& mvn checkstyle:check
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "❌ Checkstyle a échoué. Push annulé."
-    exit 1
-}
